@@ -1,13 +1,14 @@
 
-<!-- Making tha background the same color as input in the url query
+<!-- Making tha background the same color as input in the url query -->
 <style>
   body {
     background: <%= @color %>;
   }
-</style> -->
+</style>
 
 <h1>About me</h1>
 <p>Look at me! I'm coding!</p>
+
 <p>My favorite color is <%= @color %></p>
 
 <% if @size > 12 %>
@@ -15,3 +16,7 @@
 <% else %>
   <p>My shoe size is <%= @size %></p>
 <% end %>
+
+<%= link_to "Blue", about_path(color: "blue"), class: "btn btn-primary" %>
+<%= link_to "Yellow", about_path(color: "yellow"), class: "btn btn-primary" %>
+<%= link_to "Green", about_path(color: "green"), class: "btn btn-primary" %>
