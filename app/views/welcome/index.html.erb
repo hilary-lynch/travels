@@ -1,0 +1,24 @@
+<h1>Welcome to my Travel Site</h1>
+<p>This is my site!</p>
+
+<!-- printing hometown, initialized in the welcome controller -->
+<h3> This is where I'm from </h3>
+<%= @homeland %> 
+<h3> These are the countries I want to visit </h3>
+<ui>
+<% @countries.each do |country| %>
+  <li><%= country %></li>
+ <% end %>
+</ui>
+
+<!-- original code
+<%= image_tag 'thailand.jpg', width: 400%>
+<%= image_tag 'chile.jpg', width: 400  %>
+<%= image_tag 'prague.jpg', width: 400  %>
+<%= image_tag 'uk.jpg', width: 400  %> -->
+
+
+<!-- loop through images set in welcome controllers -->
+<% @index_images.each do |image| %>
+  <%= image_tag image, height: 200, width: 400%>
+ <% end %>
